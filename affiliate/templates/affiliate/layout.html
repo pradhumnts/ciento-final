@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="" />
+    <meta charset="utf-8" />
+    <title>Ciento</title>
+    <meta name="description" content="Updates and statistics" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link rel="icon" type="image/png" href="{% static 'assets/media/Ciento_R3 yellow.png' %}"/>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
+    />
+    <!--end::Page Vendors Styles-->
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+
+    <!--begin::Global Theme Styles(used by all pages)-->
+    <link
+      href="{% static 'assets/plugins/global/plugins.bundle.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    
+    <link href="{% static 'assets/css/style.bundle.css' %}" rel="stylesheet" type="text/css" />
+   
+    <!-- <script src="../../assets/js/scripts.bundle.js"></script> -->
+    <link rel="stylesheet" href="{% static 'assets/css/ciento.css' %}" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+   
+    <!--end::Global Theme Styles-->
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <!--end::Global Theme Styles-->
+    {% block styles %}
+    {% endblock %}
+  </head>
+
+  <body id="kt_body" class="header-fixed header-mobile-fixed page-loading">
+      {% block body %}
+      {% endblock %}
+      <script src="{% static 'assets/plugins/global/plugins.bundle.js' %}"></script>
+      <script src="{% static 'assets/plugins/custom/prismjs/prismjs.bundle.js' %}"></script>
+      <script src="{% static 'assets/js/scripts.bundle.js' %}"></script>
+      
+    </body>
+    </html>
+      

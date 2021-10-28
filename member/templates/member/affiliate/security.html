@@ -1,0 +1,67 @@
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>QR</title>
+
+
+    
+
+<script src="https://unpkg.com/html5-qrcode@2.0.9/dist/html5-qrcode.min.js"></script>
+
+
+<meta name="theme-color" content="#7952b3">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .form-group {
+        margin-top: 1rem;
+      }
+      .compa{
+      display:none;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="./assets/navbar.css" rel="stylesheet">
+        <link href="./assets/list-groups.css" rel="stylesheet">
+
+  </head>
+  <body style="background: #F2F2F2;">
+    
+<main>
+
+
+
+<div id="qr-reader" style="width: 600px"></div>
+
+</main>
+
+
+
+      
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    function onScanSuccess(decodedText, decodedResult) {
+     console.log(`Code scanned = ${decodedText}`, decodedResult);
+}
+var html5QrcodeScanner = new Html5QrcodeScanner(
+  "qr-reader", { fps: 10, qrbox: 250 });
+html5QrcodeScanner.render(onScanSuccess);
+  </script>
+
+</body></html>

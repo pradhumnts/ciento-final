@@ -1,0 +1,472 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <base href="" />
+    <meta charset="utf-8" />
+    <title>Ciento</title>
+    <meta name="description" content="Updates and statistics" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" href="{% static 'assets/media/Ciento_R3 yellow.png' %}"/>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
+    />
+    <!--end::Page Vendors Styles-->
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+
+    <!--begin::Global Theme Styles(used by all pages)-->
+    <link
+      href="{% static 'assets/plugins/global/plugins.bundle.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+  
+    <link href="{% static 'assets/css/style.bundle.css' %}" rel="stylesheet" type="text/css" />
+   
+    <!-- <script src="../../assets/js/scripts.bundle.js"></script> -->
+    <link rel="stylesheet" href="{% static 'assets/css/ciento.css' %}" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+   
+    <!--end::Global Theme Styles-->
+  </head>
+
+  <body id="kt_body" class="page-loading">
+    <!-- <div class="loading-wrapper">
+        <div id="loading"></div>
+    </div> -->
+      <div class="header-mobile bg-primary ciento-mobile-header mb-5">
+          <div class="logo-ciento d-flex align-items-center">
+              <div class="logo-img">
+                  <img src="../../assets/media/Ciento_R3 yellow.png" alt="" class="img-fluid">
+              </div>
+              <p class="text-white ml-3 font-weight-bold">Cineto</p>
+          </div>
+          <div class="ciento-settings d-flex align-items-center mr-3">
+              <div class="notifications">
+                  <a href="./notifications.html" class="ripplelink overflow-hidden">
+                    <div class="notification-bell">
+                      <i class="fa fa-bell text-white"></i>
+                      <div class="notification-dot"></div>
+                  </div>
+                </a>
+              </div>
+              <div class="profile">
+                <a href="./profile.html" class="symbol symbol-35 mr-5 mt-2">
+                    <div class="symbol-label ripplelink overflow-hidden">
+                        <img src="../../assets/media/ciento/membership/alex-motoc-3JK2AtZhupQ-unsplash.jpg" class="h-100 rounded-circle align-self-end" alt="">
+                    </div>
+                </a>
+              </div>
+          </div>
+      </div>
+      <div class="px-4">
+      <div class="card card-custom">
+        <div class="card-body" style="background: #EEF0F8;padding:0">
+            <div class="tab-content">
+             <div class="tab-pane fade show active" id="kt_tab_pane_7_1" role="tabpanel" aria-labelledby="kt_tab_pane_7_1">
+                <div class="container p-0">
+                    <!--begin::List Widget 1-->
+                    <div class="card main-list card-custom card-stretch gutter-b rounded-big" style="height:75vh">
+                     
+                      <!--begin::Body-->
+                      <div class="card-body p-0">
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center membership-link overflow-hidden ripplelink p-4" data-location="./membership.html">
+                              <!--begin::Symbol-->
+                              <a href="./membership.html" class="symbol symbol-50 mr-3">
+                                  <div class="symbol-label">
+                                      <img src="../../assets/media/ciento/membership/damian-barczak-U9E423m3Hd8-unsplash.jpg" class="h-100 rounded-circle align-self-end" alt="">
+                                  </div>
+                              </a>
+                              <!--end::Symbol-->
+                              <!--begin::Text-->
+                              <div class="d-flex flex-column font-weight-bold ml-3">
+                                  <a href="#" class="text-dark text-hover-primary mb-1"><h5 class="m-0" style="font-weight: 600;">Residents Cabarete</h5></a>
+                                  <span class="text-muted text-truncate" style="max-width:60vw;">Residents that are more than 100 days</span>
+                              </div>
+                              <!--end::Text-->
+                          </div>
+                          <hr class="m-0">
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center membership-link overflow-hidden ripplelink p-4" data-location="./membership.html">
+                              <!--begin::Symbol-->
+                              <a href="./membership.html" class="symbol symbol-50 mr-3">
+                                  <div class="symbol-label">
+                                      <img src="../../assets/media/ciento/membership/dayne-topkin-GS_iQCc7WoE-unsplash.jpg" class="h-100 rounded-circle align-self-end" alt="">
+                                  </div>
+                              </a>
+                              <!--end::Symbol-->
+                              <!--begin::Text-->
+                              <div class="d-flex flex-column font-weight-bold ml-3">
+                                  <a href="#" class="text-dark-75 text-hover-primary mb-1 font-size-lg"><h5 class="m-0" style="font-weight: 600;">Residents Cabarete</h5></a>
+                                  <span class="text-muted text-truncate" style="max-width:60vw;">Residents that are more than 100 days</span>
+                              </div>
+                              <!--end::Text-->
+                          </div>
+                          <hr class="m-0">
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center membership-link overflow-hidden ripplelink p-4" data-location="./membership.html">
+                              <!--begin::Symbol-->
+                                      <a href="./membership.html" class="symbol symbol-50 mr-3">
+                                          <div class="symbol-label">
+                                              <img src="../../assets/media/ciento/membership/erik-mclean-JPrB3w4h7mA-unsplash.jpg" class="h-100 rounded-circle align-self-end" alt="">
+                                          </div>
+                                      </a>
+                              <!--end::Symbol-->
+                              <!--begin::Text-->
+                              <div class="d-flex flex-column font-weight-bold ml-3">
+                                  <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg"><h5 class="m-0" style="font-weight: 600;">Residents Cabarete</h5></a>
+                                  <span class="text-muted text-truncate" style="max-width:80%;">Residents that are more than 100 days </span>
+                              </div>
+                              <!--end::Text-->
+                          </div>
+                          <hr class="m-0">
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center membership-link overflow-hidden ripplelink p-4" data-location="./membership.html">
+                               <!--begin::Symbol-->
+                               <a href="./membership.html" class="symbol symbol-50 mr-3">
+                                  <div class="symbol-label">
+                                      <img src="../../assets/media/ciento/membership/ismail-hadine-rsNbV-PiCHc-unsplash.jpg" class="h-100 rounded-circle align-self-end" alt="">
+                                  </div>
+                              </a>
+                              <!--end::Symbol-->
+                              <!--begin::Text-->
+                              <div class="d-flex flex-column font-weight-bold ml-3">
+                                  <a href="#" class="text-dark text-hover-primary mb-1"><h5 class="m-0" style="font-weight: 600;">Residents Cabarete</h5></a>
+                                  <span class="text-muted text-truncate" style="max-width:60vw;">Residents that are more than 100 days</span>
+                              </div>
+                              <!--end::Text-->
+                          </div>
+                          <hr class="m-0">
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center membership-link overflow-hidden ripplelink p-4" data-location="./membership.html">
+                               <!--begin::Symbol-->
+                               <a href="./membership.html" class="symbol symbol-50 mr-3">
+                                  <div class="symbol-label">
+                                      <img src="../../assets/media/ciento/membership/walter-lee-olivares-de-la-cruz-aGlvfwYXzdg-unsplash.jpg" class="h-100 rounded-circle align-self-end" alt="">
+                                  </div>
+                              </a>
+                              <!--end::Symbol-->
+                              <!--begin::Text-->
+                              <div class="d-flex flex-column font-weight-bold ml-3">
+                                  <a href="#" class="text-dark text-hover-primary mb-1"><h5 class="m-0" style="font-weight: 600;">Residents Cabarete</h5></a>
+                                  <span class="text-muted text-truncate" style="max-width:60vw;">Residents that are more than 100 days</span>
+                              </div>
+                              <!--end::Text-->
+                          </div>
+                          <hr class="m-0">
+                          <!--end::Item-->
+                           <!--begin::Item-->
+                           <div class="d-flex align-items-center membership-link overflow-hidden ripplelink p-4" data-location="./membership.html">
+                              <!--begin::Symbol-->
+                              <a href="./membership.html" class="symbol symbol-50 mr-3">
+                                  <div class="symbol-label">
+                                      <img src="../../assets/media/ciento/membership/zac-wolff-nNF8OGIX7ig-unsplash.jpg" class="h-100 rounded-circle align-self-end" alt="">
+                                  </div>
+                              </a>
+                              <!--end::Symbol-->
+                              <!--begin::Text-->
+                              <div class="d-flex flex-column font-weight-bold ml-3">
+                                  <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg"><h5 class="m-0" style="font-weight: 600;">Residents Cabarete </h5></a>
+                                  <span class="text-muted text-truncate" style="max-width:60vw;">Residents that are more than 100 days</span>
+                              </div>
+                              <!--end::Text-->
+                          </div>
+                          <hr class="m-0">
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center membership-link overflow-hidden ripplelink p-4" data-location="./membership.html">
+                              <!--begin::Symbol-->
+                              <a href="./membership.html" class="symbol symbol-50 mr-3">
+                                  <div class="symbol-label">
+                                      <img src="../../assets/media/ciento/membership/alex-motoc-3JK2AtZhupQ-unsplash.jpg" class="h-100 rounded-circle align-self-end" alt="">
+                                  </div>
+                              </a>
+                              <!--end::Symbol-->
+                              <!--begin::Text-->
+                              <div class="d-flex flex-column font-weight-bold ml-3">
+                                  <a href="#" class="text-dark-75 text-hover-primary mb-1 font-size-lg"><h5 class="m-0" style="font-weight: 600;">Residents Cabarete</h5></a>
+                                  <span class="text-muted text-truncate" style="max-width:60vw;">Residents that are more than 100 days</span>
+                              </div>
+                              <!--end::Text-->
+                          </div>
+                          <hr class="m-0">
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center membership-link overflow-hidden ripplelink p-4" data-location="./membership.html">
+                              <!--begin::Symbol-->
+                              
+                                      <a href="./membership.html" class="symbol symbol-50 mr-3">
+                                          <div class="symbol-label">
+                                              <img src="../../assets/media/ciento/membership/damian-barczak-U9E423m3Hd8-unsplash.jpg" class="h-100 rounded-circle align-self-end" alt="">
+                                          </div>
+                                      </a>
+                              <!--end::Symbol-->
+                              <!--begin::Text-->
+                              <div class="d-flex flex-column font-weight-bold ml-3">
+                                  <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg"><h5 class="m-0" style="font-weight: 600;">Residents Cabarete</h5></a>
+                                  <span class="text-muted text-truncate" style="max-width:80%;">Residents that are more than 100 days</span>
+                              </div>
+                              <!--end::Text-->
+                          </div>
+                          <hr class="m-0">
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center membership-link overflow-hidden ripplelink p-4" data-location="./membership.html">
+                               <!--begin::Symbol-->
+                               <a href="./membership.html" class="symbol symbol-50 mr-3">
+                                  <div class="symbol-label">
+                                      <img src="../../assets/media/ciento/membership/dayne-topkin-GS_iQCc7WoE-unsplash.jpg" class="h-100 rounded-circle align-self-end" alt="">
+                                  </div>
+                              </a>
+                              <!--end::Symbol-->
+                              <!--begin::Text-->
+                              <div class="d-flex flex-column font-weight-bold ml-3">
+                                  <a href="#" class="text-dark text-hover-primary mb-1"><h5 class="m-0" style="font-weight: 600;">Residents Cabarete</h5></a>
+                                  <span class="text-muted text-truncate" style="max-width:60vw;">Residents that are more than 100 days</span>
+                              </div>
+                              <!--end::Text-->
+                          </div>
+                          <hr class="m-0">
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center membership-link overflow-hidden ripplelink p-4" data-location="./membership.html">
+                               <!--begin::Symbol-->
+                               <a href="./membership.html" class="symbol symbol-50 mr-3">
+                                  <div class="symbol-label">
+                                      <img src="../../assets/media/ciento/membership/erik-mclean-JPrB3w4h7mA-unsplash.jpg" class="h-100 rounded-circle align-self-end" alt="">
+                                  </div>
+                              </a>
+                              <!--end::Symbol-->
+                              <!--begin::Text-->
+                              <div class="d-flex flex-column font-weight-bold ml-3">
+                                  <a href="#" class="text-dark text-hover-primary mb-1"><h5 class="m-0" style="font-weight: 600;">Residents Cabarete</h5></a>
+                                  <span class="text-muted text-truncate" style="max-width:60vw;">Residents that are more than 100 days</span>
+                              </div>
+                              <!--end::Text-->
+                          </div>
+                          <!--end::Item-->
+
+                          <div class="text-center text-muted font-weight-bold p-2 py-5 mt-5">Tap on a membership to see offers.</div>
+                      </div>
+                      <!--end::Body-->
+                  </div>
+                  <!--end::List Widget 1-->
+                </div>
+             </div>
+             <div class="tab-pane fade" id="kt_tab_pane_7_2" role="tabpanel" aria-labelledby="kt_tab_pane_7_2">
+                <div class="container p-0">
+                    <!--begin::List Widget 1-->
+                    <div class="card main-list card-custom card-stretch gutter-b rounded-big" style="height:75vh">
+                     
+                      <!--begin::Body-->
+                      <div class="card-body p-0">
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center affiliate-link overflow-hidden ripplelink p-4" data-location="./qr-scan.html">
+                              <!--begin::Symbol-->
+                              <a href="./affiliate.html" class="symbol symbol-50 mr-3">
+                                  <div class="symbol-label">
+                                      <img src="../../assets/media/ciento/albert-YYZU0Lo1uXE-unsplash.jpg" class="h-100 rounded-circle align-self-end" alt="">
+                                  </div>
+                              </a>
+                              <!--end::Symbol-->
+                              <!--begin::Text-->
+                              <div class="d-flex flex-column font-weight-bold ml-3">
+                                  <a href="#" class="text-dark text-hover-primary mb-1 "><h5 class="m-0" style="font-weight: 600;">Drift</h5></a>
+                                  <span class="text-muted text-truncate" style="max-width:60vw;">Residents that are more than 100 days</span>
+                              </div>
+                              <!--end::Text-->
+                          </div>
+                          <hr class="m-0">
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center affiliate-link overflow-hidden ripplelink p-4" data-location="./qr-scan.html">
+                              <!--begin::Symbol-->
+                              <a href="./affiliate.html" class="symbol symbol-50 mr-3">
+                                  <div class="symbol-label">
+                                      <img src="../../assets/media/ciento/celine-ylmz-L2ost-ZEmK8-unsplash.jpg" class="h-100 rounded-circle align-self-end" alt="">
+                                  </div>
+                              </a>
+                              <!--end::Symbol-->
+                              <!--begin::Text-->
+                              <div class="d-flex flex-column font-weight-bold ml-3">
+                                  <a href="#" class="text-dark-75 text-hover-primary mb-1 "><h5 class="m-0" style="font-weight: 600;">No Va</h5></a>
+                                  <span class="text-muted text-truncate" style="max-width:60vw;">Residents that are more than 100 days</span>
+                              </div>
+                              <!--end::Text-->
+                          </div>
+                          <hr class="m-0">
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center affiliate-link overflow-hidden ripplelink p-4" data-location="./qr-scan.html">
+                              <!--begin::Symbol-->
+                                      <a href="./affiliate.html" class="symbol symbol-50 mr-3">
+                                          <div class="symbol-label">
+                                              <img src="../../assets/media/ciento/dan-gold-E6HjQaB7UEA-unsplash.jpg" class="h-100 rounded-circle align-self-end" alt="">
+                                          </div>
+                                      </a>
+                              <!--end::Symbol-->
+                              <!--begin::Text-->
+                              <div class="d-flex flex-column font-weight-bold ml-3">
+                                  <a href="#" class="text-dark text-hover-primary mb-1 "><h5 class="m-0" style="font-weight: 600;">Drift</h5></a>
+                                  <span class="text-muted text-truncate" style="max-width:80%;">Residents that are more than 100 days</span>
+                              </div>
+                              <!--end::Text-->
+                          </div>
+                          <hr class="m-0">
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center affiliate-link overflow-hidden ripplelink p-4" data-location="./qr-scan.html">
+                               <!--begin::Symbol-->
+                               <a href="./affiliate.html" class="symbol symbol-50 mr-3">
+                                  <div class="symbol-label">
+                                      <img src="../../assets/media/ciento/davey-gravy-DmO662qvWO8-unsplash.jpg" class="h-100 rounded-circle align-self-end" alt="">
+                                  </div>
+                              </a>
+                              <!--end::Symbol-->
+                              <!--begin::Text-->
+                              <div class="d-flex flex-column font-weight-bold ml-3">
+                                  <a href="#" class="text-dark text-hover-primary mb-1 "><h5 class="m-0" style="font-weight: 600;">No Va</h5></a>
+                                  <span class="text-muted text-truncate" style="max-width:60vw;">Residents that are more than 100 days</span>
+                              </div>
+                              <!--end::Text-->
+                          </div>
+                          <hr class="m-0">
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                          <div class="d-flex align-items-center overflow-hidden ripplelink p-4 py-4 affiliate-link" data-location="./qr-scan.html">
+                               <!--begin::Symbol-->
+                               <a href="./affiliate.html" class="symbol symbol-50 mr-3">
+                                  <div class="symbol-label">
+                                      <img src="../../assets/media/ciento/edvin-johansson-rlwE8f8anOc-unsplash.jpg" class="h-100 rounded-circle align-self-end" alt="">
+                                  </div>
+                              </a>
+                              <!--end::Symbol-->
+                              <!--begin::Text-->
+                              <div class="d-flex flex-column font-weight-bold ml-3">
+                                  <a href="#" class="text-dark text-hover-primary mb-1 "><h5 class="m-0" style="font-weight: 600;">Drift</h5></a>
+                                  <span class="text-muted text-truncate" style="max-width:60vw;">Residents that are more than 100 days</span>
+                              </div>
+                              <!--end::Text-->
+                          </div>
+                          <hr class="m-0">
+                          <!--end::Item-->
+                           <!--begin::Item-->
+                           <div class="d-flex align-items-center overflow-hidden ripplelink p-4 py-4 affiliate-link" data-location="./qr-scan.html" >
+                              <!--begin::Symbol-->
+                              <a href="./affiliate.html" class="symbol symbol-50 mr-3">
+                                  <div class="symbol-label">
+                                      <img src="../../assets/media/ciento/farhad-ibrahimzade-aF2x7GqjA7A-unsplash.jpg" class="h-100 rounded-circle align-self-end" alt="">
+                                  </div>
+                              </a>
+                              <!--end::Symbol-->
+                              <!--begin::Text-->
+                              <div class="d-flex flex-column font-weight-bold ml-3">
+                                  <a href="#" class="text-dark text-hover-primary mb-1 "><h5 class="m-0" style="font-weight: 600;">No Va</h5></a>
+                                  <span class="text-muted  text-truncate" style="max-width:60vw;">Residents that are more than 100 days</span>
+                              </div>
+                              <!--end::Text-->
+                          </div>
+                          <hr class="m-0">
+                          <!--end::Item-->
+                          <!--begin::Item-->
+                            <div class="d-flex align-items-center affiliate-link overflow-hidden ripplelink p-4 py-4" data-location="./qr-scan.html">
+                              <!--begin::Symbol-->
+                              <a href="./affiliate.html" class="symbol symbol-50 mr-3">
+                                  <div class="symbol-label">
+                                      <img src="../../assets/media/ciento/ivan-stern-LOLSb7m6XkU-unsplash.jpg" class="h-100 rounded-circle align-self-end" alt="">
+                                  </div>
+                              </a>
+                              
+                              <!--end::Symbol-->
+                              <!--begin::Text-->
+                              <div class="d-flex flex-column font-weight-bold ml-3">
+                                  <a href="#" class="text-dark-75 text-hover-primary mb-1 "><h5 class="m-0" style="font-weight: 600;">Drift</h5></a>
+                                  <span class="text-muted  text-truncate" style="max-width:60vw;">Residents that are more than 100 days</span>
+                              </div>
+                              <!--end::Text-->
+                          </div>
+                
+                       
+                           <!--end::Item-->
+
+                          <div class="text-center text-muted font-weight-bold p-2 py-5 mt-5">Tap on a affiliate to scan.</div>
+                      </div>
+                      <!--end::Body-->
+                  </div>
+                  <!--end::List Widget 1-->
+                </div>
+             </div>
+            
+            </div>
+           </div>
+        <div class="card-header">
+         <div class="card-toolbar">
+          <ul class="nav nav-bold nav-pills navigation-bottom-mobile bg-primary p-2 ">
+           <li class="nav-item">
+            <a class="nav-link font-weight-bold w-100 py-3 rounded-big active overflow-hidden ripplelink p-4 py-4" data-toggle="tab" href="#kt_tab_pane_7_1">Memberships</a>
+           </li>
+           <li class="nav-item">
+            <a class="nav-link overflow-hidden ripplelink p-4 py-4 btn font-weight-bold border-0 w-100 py-3 rounded-big " data-toggle="tab" href="#kt_tab_pane_7_2">Affiliates</a>
+           </li>
+          </ul>
+         </div>
+        </div>
+        
+       </div>
+    </div>
+       <script>
+           // Click effects
+           var links = document.querySelectorAll('.ripplelink');
+
+            for (var i = 0, len = links.length; i < len; i++) {
+            links[i].addEventListener('click', function(e) {
+                var targetEl = e.target;
+                var inkEl = targetEl.querySelector('.ink');
+
+                if (inkEl) {
+                inkEl.classList.remove('animate');
+                }
+                else {
+                inkEl = document.createElement('span');
+                inkEl.classList.add('ink');
+                inkEl.style.width = inkEl.style.height = Math.max(targetEl.offsetWidth, targetEl.offsetHeight) + 'px';
+                targetEl.appendChild(inkEl);
+                }
+
+                inkEl.style.left = (e.offsetX - inkEl.offsetWidth / 2) + 'px';
+                inkEl.style.top = (e.offsetY - inkEl.offsetHeight / 2) + 'px';
+                inkEl.classList.add('animate');
+            }, false);
+            }
+
+           $(document).ready(function(){
+                $(".affiliate-link").click(function(){
+                    window.location = $(".affiliate-link").data("location")
+                });
+                $(".membership-link").click(function(){
+                    window.location = $(".membership-link").data("location")
+                });
+                $(window).on('load', function() {
+                  $('.loading-wrapper').fadeOut('slow');
+              })
+            });
+ 
+       </script>
+    		<!--begin::Global Theme Bundle(used by all pages)-->
+		<script src="{% static 'assets/plugins/global/plugins.bundle.js' %}"></script>
+		<script src="{% static 'assets/js/scripts.bundle.js' %}"></script>
+		<!--end::Global Theme Bundle-->
+    </body>
+    </html>

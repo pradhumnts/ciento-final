@@ -1,0 +1,288 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="" />
+    <meta charset="utf-8" />
+    <title>Ciento</title>
+    <meta name="description" content="Updates and statistics" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link rel="icon" type="image/png" href="{% static 'assets/media/Ciento_R3 yellow.png' %}"/>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
+    />
+    <!--end::Page Vendors Styles-->
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+
+    <!--begin::Global Theme Styles(used by all pages)-->
+    <link
+      href="{% static 'assets/plugins/global/plugins.bundle.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+  
+    <link href="{% static 'assets/css/style.bundle.css' %}" rel="stylesheet" type="text/css" />
+   
+    <!-- <script src="../../assets/js/scripts.bundle.js"></script> -->
+    <link rel="stylesheet" href="{% static 'assets/css/ciento.css' %}" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+   
+    <!--end::Global Theme Styles-->
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <!--end::Global Theme Styles-->
+  </head>
+
+  <body id="kt_body" class="header-fixed header-mobile-fixed page-loading">
+    <div id="kt_header" class="header bg-white mb-5">
+        <!--begin::Container-->
+        <div
+          class="
+            container
+            d-flex
+            align-items-stretch
+            justify-content-between
+          "
+        >
+          <!--begin::Left-->
+          <div class="d-flex justify-content-between w-100 mr-2 py-5">
+            <!--begin::Page Title-->
+            <div class="d-flex align-items-center">
+              <img
+                src="../../assets/media/custom/Ciento_R3 yellow.png"
+                alt=""
+                class="img-fluid logo mx-5"
+              />
+              <h3
+                class="d-none text-dark d-lg-flex align-items-center mr-10 mb-0"
+              >
+                Ciento
+              </h3>
+            </div>
+  
+            <!--end::Page Title-->
+            <!--begin::Header Menu Wrapper-->
+            <div
+              class="header-menu-wrapper header-menu-wrapper-left"
+              id="kt_header_menu_wrapper"
+            >
+              <!--begin::Header Menu-->
+              <div
+                id="kt_header_menu"
+                class="header-menu header-menu-mobile header-menu-layout-default"
+              >
+                <!--begin::Header Nav-->
+                <ul class="menu-nav">
+                  <li class="menu-item">
+                    <a href="/ciento/index.html" class="menu-link">
+                      <span class="menu-text">Dashboard</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="../../assets/media/custom/Ciento_R3 yellow.png" class="menu-link">
+                      <i class="flaticon2-notification menu-text"></i>
+                    </a>
+                  </li>
+  
+                  <li class="menu-item">
+                    <a href="javascript:;" class="menu-link">
+                      <i class="flaticon2-user menu-text"></i>
+                    </a>
+                  </li>
+                </ul>
+                <!--end::Header Nav-->
+              </div>
+              <!--end::Header Menu-->
+            </div>
+            <!--end::Header Menu Wrapper-->
+          </div>
+          <!--end::Left-->
+          <!--begin::Topbar-->
+  
+          <!--end::Topbar-->
+        </div>
+      </div>
+      <div id="kt_header_mobile" class="header-mobile header-mobile-fixed">
+              <!--begin::Logo-->
+              <a href="index.html">
+                  <img alt="Logo" src="../../assets/media/custom/Ciento_R3 yellow.png" class="logo-default max-h-30px" />
+              </a>
+       
+              <!--end::Logo-->
+              <!--begin::Toolbar-->
+              <div class="d-flex align-items-center">
+                  <!--begin::Header Menu Mobile Toggle-->
+                  <button class="btn p-0 burger-icon ml-4" id="kt_header_mobile_toggle">
+                      <span></span>
+                  </button>
+                  <!--end::Header Menu Mobile Toggle-->
+                  <!--begin::Topbar Mobile Toggle-->
+                  <button class="btn btn-hover-text-primary p-0 ml-2" id="kt_header_mobile_topbar_toggle">
+                      <span class="svg-icon svg-icon-xl">
+                          <!--begin::Svg Icon | path:assets/media/svg/icons/General/User.svg-->
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                  <polygon points="0 0 24 0 24 24 0 24" />
+                                  <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
+                                  <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
+                              </g>
+                          </svg>
+                          <!--end::Svg Icon-->
+                      </span>
+                  </button>
+                  <!--end::Topbar Mobile Toggle-->
+              </div>
+              <!--end::Toolbar-->
+          </div>
+
+             <!--begin::Container-->
+             <div class="container">
+                
+                <!--begin::Card-->
+                <div class="card card-custom">
+                  <div class="card-header flex-wrap py-5">
+                    <div class="card-title">
+                      <h3 class="card-label">Memberships
+                      <div class="text-muted pt-2 font-size-sm">List of all the memberships</div></h3>
+                    </div>
+                   
+                  </div>
+                  <div class="card-body">
+                    <!--begin: Datatable-->
+                    <table class="table table-separate table-head-custom table-checkable" id="kt_datatable">
+                      <thead>
+                        <tr>
+                          <th>Membership Name</th>
+                          <th>Ambassador</th>
+                          <th>Disciption</th>
+                          <th>Last Updated</th>
+                          <th>Status</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><div class="d-flex align-items-center">
+                            <div class="symbol symbol-50 flex-shrink-0">
+                                <img src="../../assets/media/ciento/membership/ismail-hadine-rsNbV-PiCHc-unsplash.jpg" alt="photo">
+                            </div>
+                            <div class="ml-3">
+                              <span class="text-dark-75 font-weight-bold line-height-sm d-block pb-2"> Residents Cabarete</span>
+                            </div>
+                          </div></td>
+                          <td>Jareb Labro</td>
+                          <td>Surfers we welcome everyday. First beer for free
+                            every thursday!! (Offer valid until 5pm every Thursday)</td>
+                          <td>14/10/21</td>
+                          <td>2</td>
+                        
+                          <td nowrap="nowrap"></td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                    <!--end: Datatable-->
+                  </div>
+                </div>
+                <!--end::Card-->
+              </div>
+              <!--end::Container-->
+     
+                         
+          <div class="container py-5">
+            <div class="row">
+              <div class="col-xl-12">
+                <div
+            style="width:100%;"
+                  class="
+                    card card-custom card-stretch
+                    gutter-b
+                    bg-white
+                    shadow
+                    rounded-big
+                  "
+                >
+                  <!--begin::Header-->
+                  <div class="card-header border-0 pt-5">
+                    <h1 class="card-title align-items-start flex-column">
+                      <span class="card-label font-weight-bolder text-dark"
+                        >Total Visits</span
+                      >
+                      <span class="text-muted mt-3 font-weight-bold font-size-sm"
+                        >2021</span
+                      >
+                    </h1>
+                  </div>
+            <hr>
+                  <!--end::Header-->
+                  <!--begin::Body-->
+                  <div class="card-body pt-12">
+                    <!--begin::Item-->
+                    <div id="chart"></div>
+                    <!--end::Item-->
+                  </div>
+                  <!--end::Body-->
+                </div>
+              </div>
+             
+              </div>
+            </div>
+          </div>
+              
+                    <!--begin::Footer-->
+            <div class="footer bg-white py-4 d-flex flex-lg-column mt-10" id="kt_footer">
+                <!--begin::Container-->
+                <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+                    <!--begin::Copyright-->
+                    <div class="text-dark order-2 order-md-1">
+                        <span class="text-muted font-weight-bold mr-2">2021©</span>
+                        <a href="#" target="_blank" class="text-dark-75 text-hover-primary">Ciento</a>
+                    </div>
+                    <!--end::Copyright-->
+                </div>
+                <!--end::Container-->
+            </div>
+            <!--end::Footer-->
+
+               <script>
+        // chart js
+        var options = {
+          chart: {
+            type: "area",
+          },
+          series: [
+            {
+              name: "Visits",
+              data: [5, 10, 15, 20, 25, 30, 35, 40, 45],
+            },
+          ],
+  
+          xaxis: {
+            categories: ["MS1", "MS2", "MS3", "MS4", "MS5", "MS6", "MS7", "MS8", "MS9"],
+          },
+          colors: ["#1EC5BD"],
+        };
+  
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+  
+        chart.render();
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+      <!--begin::Page Scripts(used by this page)-->
+      <script src="{% static 'assets/js/pages/widgets.js' %}"></script>
+    
+            
+            <!--begin::Page Vendors(used by this page)-->
+            <script src="{% static 'assets/plugins/custom/datatables/datatables.bundle.js' %}"></script>
+            <!--end::Page Vendors-->
+            <!--begin::Page Scripts(used by this page)-->
+            <script src="{% static 'assets/js/pages/crud/datatables/advanced/column-rendering.js' %}"></script>
+        
+        </body>
+        </html>

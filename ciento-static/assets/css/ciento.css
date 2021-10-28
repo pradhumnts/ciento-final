@@ -1,0 +1,218 @@
+.logo{
+    width:50px;
+    height: 50px;
+}
+
+#chart {
+    max-width:100%;
+    min-height: 50px !important;
+  }
+  .rounded-big{
+      border-radius:20px;
+  }
+.logo-img img{
+    width:35px  ;
+    height:35px;
+}
+.ciento-mobile-header{
+    padding: 12% 5%;
+    border-radius: 0px 0px 2rem 2rem;
+    box-shadow: 3px 10px 30px #282f4048;
+}
+.logo-ciento p{
+    font-size:1.3rem;
+    font-weight: 1000 !important;
+    margin-bottom: 0;
+}
+.ciento-settings .notification-bell{
+    position: relative;
+}
+.ciento-settings .notification-dot{
+    width:7px;height: 7px; 
+    background-color:#E6DB1A;
+    padding:5%;
+    z-index: 111;
+    border-radius:50%;
+    position:absolute;
+    top:0px;right:0px;
+}
+.ciento-settings .notification-bell i{
+    font-size:1.8rem;
+    stroke:white;
+}
+.ciento-settings{
+    column-gap:30%;
+}
+.navigation-bottom-mobile{
+    position:fixed;
+    left:0;
+    bottom:0;
+    width:100%;
+    z-index: 1111;
+    display: grid;
+    grid-auto-flow: column;
+    border-radius: 2rem 2rem 0px 0px;
+    box-shadow: 3px 10px 30px #282f4048;
+}
+.navigation-bottom-mobile .nav-item a{  
+    display:flex;
+    justify-content:center;
+    font-size:1.2em;
+    border-radius:20px !important;
+}
+.navigation-bottom-mobile .nav-item .active{
+    background-color: white !important;
+    z-index: 111;
+    color: #282F40 !important;
+}
+body{
+    position:relative;
+}
+.top-section{
+    border-radius: 0px 0px 2rem 2rem;
+    box-shadow: 3px 10px 30px #cdcdcd48;
+}
+.navigation-secondary{
+    display:grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 15% 70% 15%;
+    align-items:center;
+    justify-content: center;
+    z-index:100;
+}
+.navigation-secondary i{
+     color: #282F40 !important;
+}
+.navigation-secondary .member-settings{
+    column-gap:2rem;
+    font-size:1.4rem;
+}
+.membership-card{
+    row-gap:20px;
+}
+h1, h2, h3{
+    font-weight: 600 !important;
+    color:#282F40;
+}
+.s{
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+body{
+    background-color: #F6F6F6
+}
+.rounded-section{
+    border-radius: 2rem;
+    box-shadow: -3px -10px 30px #cdcdcd48;
+}
+.personal-info-form input, .personal-info-form select{
+    border:none;
+    padding:0;
+    border-radius:0;
+    border-bottom:1px solid #282f4083;
+    height:100%;
+}
+.personal-info-form label{
+    font-weight: 500;
+    color:#B5B5C3 !important;
+    font-size:0.9rem;
+}
+.qr-scanner{
+    object-fit:cover;
+    height:100vh;
+    width:100%;
+}
+.main-list{
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+.qr-svg{
+    z-index: 1;
+    position:absolute;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100vw;
+}
+.qr-code .overlay-content{
+    z-index: 2;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.qr-code .timer{
+    margin-top:120%;
+}
+.qr-code h3{
+    margin-bottom:150%;
+}
+
+.loading-wrapper{
+    background-color: #F6F6F6;
+    width:100vw;
+    position:absolute;
+    top:0;
+    left:0;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+  
+  #loading {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(63, 63, 63, 0.3);
+    border-radius: 50%;
+    border-top-color: black;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }
+  @-webkit-keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }
+
+  .ripplelink{
+    position:relative;
+    overflow:hidden;
+    transition: all 0.1s ease;
+    z-index:1000;
+    display:block;
+  }
+  .ink {
+    display: block;
+    position: absolute;
+    background:rgba(186, 186, 186, 0.3);
+    border-radius: 100%;
+    transform:scale(0);
+  }
+  
+  .animate {
+    animation:ripple 0.40s linear;
+  }
+  
+  @keyframes ripple {
+      100% {opacity: 0; transform: scale(2.5);}
+  }
+  .camera-icon{
+      z-index:1;
+      bottom:5%;
+      display:flex;
+      justify-content: space-between;
+      width:100%;
+      column-gap:3rem;
+      padding: 0 2rem;
+  }
+  .camera-icon svg{
+    width:30px;
+      transform:rotate(-90deg);
+  }
+  .camera-icon i{
+    font-size: 30px;
+  }

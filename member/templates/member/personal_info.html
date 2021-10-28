@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <base href="" />
+    <meta charset="utf-8" />
+    <title>Ciento</title>
+    <meta name="description" content="Updates and statistics" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" href="{% static 'assets/media/Ciento_R3 yellow.png' %}"/>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
+    />
+    <!--end::Page Vendors Styles-->
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+
+    <!--begin::Global Theme Styles(used by all pages)-->
+    <link
+      href="{% static 'assets/plugins/global/plugins.bundle.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+  
+    <link href="{% static 'assets/css/style.bundle.css' %}" rel="stylesheet" type="text/css" />
+   
+    <!-- <script src="../../assets/js/scripts.bundle.js"></script> -->
+    <link rel="stylesheet" href="{% static 'assets/css/ciento.css' %}" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+   
+    <!--end::Global Theme Styles-->
+  </head>
+  <body id="kt_body" class="page-loading">
+      <div class="top-section bg-white py-8 mb-7">
+      <div class="navigation-secondary w-100 px-5">
+        <div class="go-back">
+            <a href="#" onclick="window.history.back();"><i class="fas fa-chevron-left"></i></a>
+        </div>
+        <div class="page-title text-center">
+            <h3 class="text-primary text-truncate px-5">Personal Information</h3>
+        </div>
+        <div class="member-settings d-flex"></div>
+      </div>
+    </div> 
+    <div class="container px-2">
+        <!--begin::Form-->
+    <form class="bg-white rounded-section mb-7">
+        <div class="card-body personal-info-form">
+            <div class="form-group">
+                <label>First Name
+                </label>
+                <input type="text" class="form-control" placeholder="First Name" value="Jesica" />
+            </div>
+            <div class="form-group">
+                <label>Last Name
+                </label>
+                <input type="text" class="form-control" value="Groetz" placeholder="Last Name" />
+            </div>
+            <div class="form-group">
+                <label>Nick Name
+                </label>
+                <input type="text" class="form-control" value="Jesi" placeholder="Nick Name" />
+            </div>
+            <div class="form-group">
+                <label>Tel
+                </label>
+                <input type="number" class="form-control" value="17844757849" placeholder="Phone" />
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender
+                </label>
+                <select class="form-control" id="gender">
+                    <option>Male</option>
+                    <option selected>Female</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Email
+                </label>
+                <input type="email" class="form-control" value="jasicagroetz@gmail.com" placeholder="Enter email" />
+            </div>
+            <div class="form-group">
+                <label for="example-date-input">Date of Birth</label>
+                 <input class="form-control" type="date" value="2011-08-19" id="example-date-input"/>
+               </div>
+           
+            <div class="form-group">
+                <label>ID Number
+                </label>
+                <input type="text" disabled class="form-control" value="432440" placeholder="ID" />
+            </div>
+            
+
+        <div class="form-group">
+            <div class="alert alert-custom p-0" role="alert">
+                <div class="alert-text font-size-sm font-weight-bold text-muted">* Changing this information changes the verified status to unverified, until verification is done by Ambassador.</div>
+            </div>
+        </div>
+        <button type="reset" class="btn btn-primary mr-2 w-100 rounded-big font-weight-bold">Save Changes</button>
+        </div>
+        
+        
+    </form>
+    <!--end::Form-->
+    </div>
+    
+    </body>
+    </html>

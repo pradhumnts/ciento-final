@@ -1,0 +1,334 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="" />
+    <meta charset="utf-8" />
+    <title>Ciento</title>
+    <meta name="description" content="Updates and statistics" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" href="{% static 'assets/media/Ciento_R3 yellow.png' %}"/>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
+    />
+    <!--end::Page Vendors Styles-->
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+
+    <!--begin::Global Theme Styles(used by all pages)-->
+    <link
+      href="{% static 'assets/plugins/global/plugins.bundle.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+  
+    <link href="{% static 'assets/css/style.bundle.css' %}" rel="stylesheet" type="text/css" />
+   
+    <!-- <script src="../../assets/js/scripts.bundle.js"></script> -->
+    <link rel="stylesheet" href="{% static 'assets/css/ciento.css' %}" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+   
+  </head>
+
+  <body id="kt_body" class="header-fixed header-mobile-fixed page-loading">
+    <div id="kt_header" class="header bg-white mb-5">
+        <!--begin::Container-->
+        <div
+          class="
+            container
+            d-flex
+            align-items-stretch
+            justify-content-between
+          "
+        >
+          <!--begin::Left-->
+          <div class="d-flex justify-content-between w-100 mr-2 py-5">
+            <!--begin::Page Title-->
+            <div class="d-flex align-items-center">
+              <img
+                src="../../assets/media/custom/Ciento_R3 yellow.png"
+                alt=""
+                class="img-fluid logo mx-5"
+              />
+              <h3
+                class="d-none text-dark d-lg-flex align-items-center mr-10 mb-0"
+              >
+                Ciento
+              </h3>
+            </div>
+  
+            <!--end::Page Title-->
+            <!--begin::Header Menu Wrapper-->
+            <div
+              class="header-menu-wrapper header-menu-wrapper-left"
+              id="kt_header_menu_wrapper"
+            >
+              <!--begin::Header Menu-->
+              <div
+                id="kt_header_menu"
+                class="header-menu header-menu-mobile header-menu-layout-default"
+              >
+                <!--begin::Header Nav-->
+                <ul class="menu-nav">
+                  <li class="menu-item">
+                    <a href="/ciento/index.html" class="menu-link">
+                      <span class="menu-text">Dashboard</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="../../assets/media/custom/Ciento_R3 yellow.png" class="menu-link">
+                      <i class="flaticon2-notification menu-text"></i>
+                    </a>
+                  </li>
+  
+                  <li class="menu-item">
+                    <a href="javascript:;" class="menu-link">
+                      <i class="flaticon2-user menu-text"></i>
+                    </a>
+                  </li>
+                </ul>
+                <!--end::Header Nav-->
+              </div>
+              <!--end::Header Menu-->
+            </div>
+            <!--end::Header Menu Wrapper-->
+          </div>
+          <!--end::Left-->
+          <!--begin::Topbar-->
+  
+          <!--end::Topbar-->
+        </div>
+      </div>
+      <div id="kt_header_mobile" class="header-mobile header-mobile-fixed">
+              <!--begin::Logo-->
+              <a href="index.html">
+                  <img alt="Logo" src="../../assets/media/custom/Ciento_R3 yellow.png" class="logo-default max-h-30px" />
+              </a>
+       
+              <!--end::Logo-->
+              <!--begin::Toolbar-->
+              <div class="d-flex align-items-center">
+                  <!--begin::Header Menu Mobile Toggle-->
+                  <button class="btn p-0 burger-icon ml-4" id="kt_header_mobile_toggle">
+                      <span></span>
+                  </button>
+                  <!--end::Header Menu Mobile Toggle-->
+                  <!--begin::Topbar Mobile Toggle-->
+                  <button class="btn btn-hover-text-primary p-0 ml-2" id="kt_header_mobile_topbar_toggle">
+                      <span class="svg-icon svg-icon-xl">
+                          <!--begin::Svg Icon | path:assets/media/svg/icons/General/User.svg-->
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                  <polygon points="0 0 24 0 24 24 0 24" />
+                                  <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
+                                  <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
+                              </g>
+                          </svg>
+                          <!--end::Svg Icon-->
+                      </span>
+                  </button>
+                  <!--end::Topbar Mobile Toggle-->
+              </div>
+              <!--end::Toolbar-->
+          </div>
+          <div class="container">
+            <!--begin::Card-->
+								<div class="card card-custom gutter-b rounded-big">
+									<div class="card-body">
+										<!--begin::Details-->
+										<div class="d-flex mb-9">
+											<!--begin: Pic-->
+											<div class="flex-shrink-0 mr-7 mt-lg-0 mt-3">
+												<div class="symbol symbol-150 symbol-lg-150">
+													<img src="../../assets/media/users/300_1.jpg" class="rounded-circle" alt="image" />
+												</div>
+												<div class="symbol symbol-50 symbol-lg-120 symbol-primary d-none">
+													<span class="font-size-h3 symbol-label font-weight-boldest">JM</span>
+												</div>
+											</div>
+											<!--end::Pic-->
+											<!--begin::Info-->
+											<div class="flex-grow-1">
+												<!--begin::Title-->
+												<div class="d-flex justify-content-between flex-wrap mt-1">
+													<div class="d-flex mr-3">
+														<a href="#" class="text-dark-75 text-hover-primary font-weight-bold mr-3" style="font-size:2.8rem">Jason Muller</a>
+														<a href="#">
+															<i class="flaticon2-correct text-success font-size-h5"></i>
+														</a>
+													</div>
+												</div>
+												<!--end::Title-->
+												<!--begin::Content-->
+												<div class="d-flex flex-wrap justify-content-between mt-1">
+													<div class="d-flex flex-column flex-grow-1 pr-8">
+														<div class="d-flex flex-wrap mb-4">
+															<a href="#" class="text-dark-50 text-hover-primary font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2">
+															<i class="flaticon2-new-email mr-2 font-size-lg"></i>jasonmuller@gmail.com</a>
+															<a href="#" class="text-dark-50 text-hover-primary font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2">
+															<i class="flaticon2-calendar-3 mr-2 font-size-lg"></i>Affiliate</a>
+														</div>
+														<span class="font-weight-bold text-dark-50">I distinguish three main text objectives could be merely to inform people.</span>
+														<span class="font-weight-bold text-dark-50">A second could be persuade people.You want people to bay objective</span>
+													</div>
+												</div>
+												<!--end::Content-->
+											</div>
+											<!--end::Info-->
+										</div>
+										<!--end::Details-->
+										<div class="separator separator-solid"></div>
+										<!--begin::Items-->
+										<div class="d-flex align-items-center flex-wrap mt-8">
+											<!--begin::Item-->
+											<div class="d-flex align-items-center flex-lg-fill mr-5 mb-2">
+												<span class="mr-4">
+													<i class="fab fa-battle-net display-4 text-primary font-weight-bold"></i>
+												</span>
+												<div class="d-flex flex-column text-dark-75">
+													<span class="font-weight-bolder font-size-sm">MEMBERSHIPS</span>
+													<span class="text-dark-50 font-weight-bold">12</span>
+												</div>
+											</div>
+											<!--end::Item-->
+											<!--begin::Item-->
+											<div class="d-flex align-items-center flex-lg-fill mr-5 mb-2">
+												<span class="mr-4">
+													<i class="fas fa-sitemap icon-xl text-primary"></i>
+												</span>
+												<div class="d-flex flex-column text-dark-75">
+													<span class="font-weight-bolder font-size-sm">AFFILIATES</span>
+													<span class="text-dark-50 font-weight-bold">18</span>
+												</div>
+											</div>
+											<!--end::Item-->
+											<!--begin::Item-->
+											<div class="d-flex align-items-center flex-lg-fill mr-5 mb-2">
+												<span class="mr-4">
+													<i class="fas fa-users icon-xl text-primary"></i>
+												</span>
+												<div class="d-flex flex-column text-dark-75">
+													<span class="font-weight-bolder font-size-sm">Total Visits</span>
+													<span class="text-dark-50 font-weight-bold">12</span>
+												</div>
+											</div>
+											<!--end::Item-->
+										</div>
+										<!--begin::Items-->
+									</div>
+								</div>
+								<!--end::Card-->
+                                
+          </div>
+
+          
+          <div class="d-flex flex-column-fluid">
+            <!--begin::Container-->
+            <div class="container">
+            
+              <div class="d-flex flex-column-fluid">
+                <!--begin::Container-->
+                <div class="container p-0">
+                
+                    <div class="card card-custom rounded-big">
+                    <div class="card-header flex-wrap py-5">
+                      <div class="card-title">
+                        <h3 class="card-label">
+                          Sub Affiliates
+                        <div class="text-muted pt-2 font-size-sm">List of all the 2nd Ambassador</div>
+                      </h3>
+                      </div>
+                      <div class="card-toolbar">
+                      
+                        <!--begin::Button-->
+                        <a href="#" class="btn btn-primary font-weight-bolder">
+                        <span class="svg-icon svg-icon-md">
+                          <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Flatten.svg-->
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <rect x="0" y="0" width="24" height="24" />
+                              <circle fill="#000000" cx="9" cy="15" r="6" />
+                              <path d="M8.8012943,7.00241953 C9.83837775,5.20768121 11.7781543,4 14,4 C17.3137085,4 20,6.6862915 20,10 C20,12.2218457 18.7923188,14.1616223 16.9975805,15.1987057 C16.9991904,15.1326658 17,15.0664274 17,15 C17,10.581722 13.418278,7 9,7 C8.93357256,7 8.86733422,7.00080962 8.8012943,7.00241953 Z" fill="#000000" opacity="0.3" />
+                            </g>
+                          </svg>
+                          <!--end::Svg Icon-->
+                        </span>Add Sub Affiliates</a>
+                        <!--end::Button-->
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <!--begin: Datatable-->
+                      <table class="table table-separate table-head-custom table-checkable" id="admin-member">
+                        <thead>
+                          <tr>
+                            <th>Affiliates</th>
+                            <th>Phone</th>
+                            <th>Created On</th>
+                            <th>Updated On</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><div class="d-flex align-items-center">
+                              
+                              <div class="ml-3">
+                                <span class="text-dark-75 font-weight-bold line-height-sm d-block pb-2">Humbert Bresnen</span>
+                                <a href="#" class="text-muted text-hover-primary">humbertb@gmail.com</a>
+                              </div>
+                              
+                            </div></td>
+                            <td>+1234567890</td>
+                            <td>30/08/2021</td>
+                            <td>14/10/2021</td>
+                            <td>2</td>
+                          
+                            <td nowrap="nowrap"></td>
+                          </tr>
+                         
+                        </tbody>
+                      </table>
+                      <!--end: Datatable-->
+                    </div>
+                  </div>
+                </div>
+                <!--end::Container-->
+              </div>
+            </div>
+            <!--end::Container-->
+          </div>
+
+          
+                <!--begin::Footer-->
+        <div class="footer bg-white py-4 d-flex flex-lg-column mt-10" id="kt_footer">
+            <!--begin::Container-->
+            <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+                <!--begin::Copyright-->
+                <div class="text-dark order-2 order-md-1">
+                    <span class="text-muted font-weight-bold mr-2">2021©</span>
+                    <a href="#" target="_blank" class="text-dark-75 text-hover-primary">Ciento</a>
+                </div>
+                <!--end::Copyright-->
+            </div>
+            <!--end::Container-->
+        </div>
+        <!--end::Footer-->
+
+        <script src="{% static 'assets/plugins/global/plugins.bundle.js' %}"></script>
+        <script src="{% static 'assets/plugins/custom/prismjs/prismjs.bundle.js' %}"></script>
+        <script src="{% static 'assets/js/scripts.bundle.js' %}"></script>
+    
+        <!--begin::Page Vendors(used by this page)-->
+        <script src="{% static 'assets/plugins/custom/datatables/datatables.bundle.js' %}"></script>
+        <!--end::Page Vendors-->
+        <!--begin::Page Scripts(used by this page)-->
+        <script src="{% static 'assets/js/pages/crud/datatables/advanced/admin-member.js' %}"></script>
+    
+    </body>
+    </html>

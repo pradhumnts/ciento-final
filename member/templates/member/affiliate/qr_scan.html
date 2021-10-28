@@ -1,0 +1,191 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <base href="" />
+    <meta charset="utf-8" />
+    <title>Ciento</title>
+    <meta name="description" content="Updates and statistics" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" href="{% static 'assets/media/Ciento_R3 yellow.png' %}"/>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
+    />
+    <!--end::Page Vendors Styles-->
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+
+    <!--begin::Global Theme Styles(used by all pages)-->
+    <link
+      href="{% static 'assets/plugins/global/plugins.bundle.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+  
+    <link href="{% static 'assets/css/style.bundle.css' %}" rel="stylesheet" type="text/css" />
+    <link
+    href="{% static 'assets/plugins/custom/prismjs/prismjs.bundle.css' %}"
+    rel="stylesheet"
+    type="text/css"
+  />
+    <!-- <script src="../../assets/js/scripts.bundle.js"></script> -->
+    <link rel="stylesheet" href="{% static 'assets/css/ciento.css' %}" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+   
+  
+    <!--end::Global Theme Styles-->
+  </head>
+  <body id="kt_body" class="page-loading">
+    <!-- <div class="loading-wrapper">
+      <div id="loading"></div>
+  </div> -->
+        <div class="qr-code d-flex justify-content-center flex-column align-items-center h-100 position-relative">  
+            <div class="qr-wrapper pt-0">
+              <video id="qr-video" class="qr-scanner w-100"></video>
+            </div>
+        <div class="overlay-content d-flex justify-content-center align-items-center h-100 w-100">
+        <h3 class="w-75 text-white text-center">Align the QR code within the frame to scan</h3>
+        <div class="timer position-absolute">
+          <div class="d-flex align-items-center justify-content-center">
+            <i class="far fa-clock font-size-h3 text-white"></i>
+            <p class="font-size-h3 mb-0 ml-3 text-white" id="qr-timer"></p>
+          </div>
+          <a href="#" onclick="window.history.back()"><button class="btn btn-light font-weight-bold text-primary my-10 opacity-50">Cancel Scanning</button></a>
+        </div>
+        </div> 
+        <img src="{% static 'assets/media/QR/qr-overlay.png' %}" class="qr-svg" alt="">
+          <!-- <svg class="qr-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 427.998 926.003">
+            <path id="Subtraction_1" data-name="Subtraction 1" d="M-19177,1789h-428l0-926h428v926h0v0Zm-349-644a20.02,20.02,0,0,0-19.994,20v271a20.02,20.02,0,0,0,19.994,20h271a20.024,20.024,0,0,0,20-20V1165a20.024,20.024,0,0,0-20-20Z" transform="translate(19605 -862.999)" opacity="0.66"/>
+          </svg> -->
+        </div>
+        <div class="camera-icon position-absolute">
+          <div></div>
+          <svg aria-hidden="true" id="flash-toggle" focusable="false" data-prefix="fas" data-icon="flashlight" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg-inline--fa fa-flashlight fa-w-20 fa-3x text-white"><path fill="currentColor" d="M384 160H32a32 32 0 0 0-32 32v128a32 32 0 0 0 32 32h352l16.12 10.75c43.14 28.76 92.62 45.67 143.88 50.89V98.36c-51.26 5.22-100.74 22.13-143.88 50.89zm-96 128h-32a32 32 0 0 1 0-64h32a32 32 0 0 1 0 64zM608 96h-32v320h32a32 32 0 0 0 32-32V128a32 32 0 0 0-32-32z" class=""></path></svg>
+         
+        </div>
+       <div class="d-none">
+        <b>Detected QR code: </b>
+        <span id="cam-qr-result">None</span>
+        <br>
+        <b>Last detected at: </b>
+        <span id="cam-qr-result-timestamp"></span>
+        <br>
+        <button id="start-button">Start</button>
+        <button id="stop-button">Stop</button>
+        <hr>
+    
+        <h1>Scan from File:</h1>
+        <input type="file" id="file-selector">
+        <b>Detected QR code: </b>
+        <span id="file-qr-result">None</span>
+       </div>
+        <script type="module">
+          import QrScanner from "{% static 'assets/js/qr-scanner.min.js' %}";
+          QrScanner.WORKER_PATH = "{% static 'assets/js/qr-scanner-worker.min.js' %}";
+  
+          const video = document.getElementById('qr-video');
+          const camHasCamera = document.getElementById('cam-has-camera');
+          const camList = document.getElementById('cam-list');
+          const camHasFlash = document.getElementById('cam-has-flash');
+          const flashToggle = document.getElementById('flash-toggle');
+          const flashState = document.getElementById('flash-state');
+          const camQrResult = document.getElementById('cam-qr-result');
+          const camQrResultTimestamp = document.getElementById('cam-qr-result-timestamp');
+          
+          const changeCamera = document.querySelector("#change_camera");
+  
+          function setResult(label, result) {
+              label.textContent = result;
+              alert(result);
+              camQrResultTimestamp.textContent = new Date().toString();
+              label.style.color = 'teal';
+              clearTimeout(label.highlightTimeout);
+              label.highlightTimeout = setTimeout(() => label.style.color = 'inherit', 100);
+          }
+  
+          // ####### Web Cam Scanning #######
+  
+          const scanner = new QrScanner(video, result => setResult(camQrResult, result), error => {
+              camQrResult.textContent = error;
+              camQrResult.style.color = 'inherit';
+          });
+  
+          const updateFlashAvailability = () => {
+              scanner.hasFlash().then(hasFlash => {
+                  camHasFlash.textContent = hasFlash;
+                  flashToggle.style.display = hasFlash ? 'inline-block' : 'none';
+              });
+          };
+  
+          scanner.start().then(() => {
+              updateFlashAvailability();
+              // List cameras after the scanner started to avoid listCamera's stream and the scanner's stream being requested
+              // at the same time which can result in listCamera's unconstrained stream also being offered to the scanner.
+              // Note that we can also start the scanner after listCameras, we just have it this way around in the demo to
+              // start the scanner earlier.
+     
+              QrScanner.listCameras(true).then(cameras => cameras.forEach(camera => {
+                  const option = document.createElement('option');
+                  option.value = camera.id;
+                  option.text = camera.label;
+                  camList.add(option);
+            
+              }));
+          });
+  
+          QrScanner.hasCamera().then(hasCamera => camHasCamera.textContent = hasCamera);
+  
+          // for debugging
+          window.scanner = scanner;
+  
+          flashToggle.addEventListener('click', () => {
+              scanner.toggleFlash().then(() => flashState.textContent = scanner.isFlashOn() ? 'on' : 'off');
+          });
+          document.getElementById('show-scan-region').addEventListener('change', (e) => {
+            const input = e.target;
+            const label = input.parentNode;
+            label.parentNode.insertBefore(scanner.$canvas, label.nextSibling);
+            scanner.$canvas.style.display = input.checked ? 'block' : 'none';
+        });
+
+        document.getElementById('inversion-mode-select').addEventListener('change', event => {
+            scanner.setInversionMode(event.target.value);
+        });
+
+        camList.addEventListener('change', event => {
+            scanner.setCamera(event.target.value).then(updateFlashAvailability);
+        });
+          fileSelector.addEventListener('change', event => {
+            const file = fileSelector.files[0];
+            if (!file) {
+                return;
+            }
+            QrScanner.scanImage(file)
+                .then(result => setResult(fileQrResult, result))
+                .catch(e => setResult(fileQrResult, e || 'No QR code found.'));
+        });
+      </script>
+  
+    <script type="text/javascript">
+     
+      // qr timer
+      var timeleft = 15;
+      var downloadTimer = setInterval(function(){
+        if(timeleft <= 0){
+          clearInterval(downloadTimer);
+          window.history.back();
+        } else {
+          document.getElementById("qr-timer").innerHTML = timeleft + "s";
+        }
+        timeleft -= 1;
+      }, 1000);
+    </script>
+   
+</body>
+</html>
