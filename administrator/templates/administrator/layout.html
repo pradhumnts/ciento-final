@@ -1,0 +1,198 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <base href="" />
+    <meta charset="utf-8" />
+    <title>Ciento</title>
+    <meta name="description" content="Updates and statistics" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" href="{% static 'assets/media/Ciento_R3 yellow.png' %}"/>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
+    />
+    <!--end::Page Vendors Styles-->
+
+    <!--begin::Global Theme Styles(used by all pages)-->
+    <link
+      href="{% static 'assets/plugins/global/plugins.bundle.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'assets/plugins/custom/prismjs/prismjs.bundle.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    
+    <link href="{% static 'assets/css/style.bundle.css' %}" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link
+      href="{% static 'assets/plugins/custom/datatables/datatables.bundle.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- <script src="assets/js/scripts.bundle.js"></script> -->
+    <link rel="stylesheet" href="{% static 'assets/css/ciento.css' %}" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <!--end::Global Theme Styles-->
+  </head>
+
+  <body id="kt_body" class="header-fixed header-mobile-fixed page-loading">
+    <div id="kt_header" class="header bg-white mb-5">
+        <!--begin::Container-->
+        <div
+          class="
+            container
+            d-flex
+            align-items-stretch
+            justify-content-between
+          "
+        >
+          <!--begin::Left-->
+          <div class="d-flex justify-content-between w-100 mr-2 py-5">
+            <!--begin::Page Title-->
+           
+              <div class="d-flex align-items-center">
+                <a href="{% url 'administrator:index' %}">
+              <img
+                src="{% static 'assets/media/custom/Ciento_R3 yellow.png' %}"
+                alt=""
+                class="img-fluid logo mx-5"
+              />
+            </a>
+            <a href="{% url 'administrator:index' %}">  
+            <h3
+                class="d-none text-dark d-lg-flex align-items-center mr-10 mb-0"
+              >
+                Ciento
+              </h3>
+            </a>
+            </div>
+
+            <!--end::Page Title-->
+            <!--begin::Header Menu Wrapper-->
+            <div
+              class="header-menu-wrapper header-menu-wrapper-left"
+              id="kt_header_menu_wrapper"
+            >
+              <!--begin::Header Menu-->
+              <div
+                id="kt_header_menu"
+                class="header-menu header-menu-mobile header-menu-layout-default"
+              >
+                <!--begin::Header Nav-->
+                <ul class="menu-nav">
+                  <li class="menu-item">
+                    <a href="{% url 'administrator:index' %}" class="menu-link btn btn-light bg-white border-0">
+                      <span class="menu-text text-primary">Dashboard</span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="{% url 'administrator:notifications' %}" class="menu-link btn btn-light bg-white border-0">
+                      <i class="flaticon2-notification menu-text text-primary"></i>
+                    </a>
+                  </li>
+
+                  <li class="menu-item">
+                    <a href="{% url 'administrator:profile' %}" class="menu-link btn btn-light bg-white border-0">
+                      <i class="flaticon2-user menu-text text-primary"></i>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <div class="dropdown dropdown-inline">
+                      <a href="#" class="btn btn-light menu-text text-primary d-flex align-items-center dropdown-toggle bg-white border-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding:0.85rem 1.35rem">
+                        <i class="fas fa-globe text-primary mr-2"></i>
+                        Language
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                        <!--begin::Navigation-->
+                        <ul class="navi navi-hover">
+                          <li class="navi-item">
+                            <a href="#" class="navi-link">
+                              <span class="menu-text">English</span>
+                            </a>
+                          </li>
+                          <li class="navi-item">
+                            <a href="#" class="navi-link">
+                              <span class="menu-text">Spanish</span>
+                            </a>
+                          </li>
+                          <li class="navi-item">
+                            <a href="#" class="navi-link">
+                              <span class="menu-text">French</span>
+                            </a>
+                          </li>
+                          <li class="navi-item">
+                            <a href="#" class="navi-link">
+                              <span class="menu-text">German</span>
+                            </a>
+                          </li>
+                          <li class="navi-item">
+                            <a href="#" class="navi-link">
+                              <span class="menu-text">Netherlands</span>
+                            </a>
+                          </li>
+                          <li class="navi-item">
+                            <a href="#" class="navi-link">
+                              <span class="menu-text">Portuguese</span>
+                            </a>
+                          </li>
+                          <li class="navi-item">
+                            <a href="#" class="navi-link">
+                              <span class="menu-text">Russian</span>
+                            </a>
+                          </li>
+                        </ul>
+                        <!--end::Navigation-->
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <!--end::Header Nav-->
+              </div>
+              <!--end::Header Menu-->
+            </div>
+            <!--end::Header Menu Wrapper-->
+          </div>
+          <!--end::Left-->
+          <!--begin::Topbar-->
+
+          <!--end::Topbar-->
+        </div>
+      </div>
+{% block body %}
+{% endblock %}
+<!--begin::Footer-->
+<div class="footer bg-white py-4 d-flex flex-lg-column mt-10" id="kt_footer">
+    <!--begin::Container-->
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+      <!--begin::Copyright-->
+      <div class="text-dark order-2 order-md-1">
+        <span class="text-muted font-weight-bold mr-2">2021©</span>
+        <a href="#" target="_blank" class="text-dark-75 text-hover-primary">Ciento</a>
+      </div>
+      <!--end::Copyright-->
+    </div>
+    <!--end::Container-->
+  </div>
+  <!--end::Footer-->
+    <script src="{% static 'assets/js/pages/widgets.js' %}"></script>
+
+    <!--begin::Global Theme Bundle(used by all pages)-->
+    <script src="{% static 'assets/plugins/global/plugins.bundle.js' %}"></script>
+    <script src="{% static 'assets/plugins/custom/prismjs/prismjs.bundle.js' %}"></script>
+    <script src="{% static 'assets/js/scripts.bundle.js' %}"></script>
+  {% block scripts %}
+  {% endblock %}
+   
+  </body>
+  </html>

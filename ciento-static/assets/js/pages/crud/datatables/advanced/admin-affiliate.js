@@ -10,12 +10,7 @@ var KTDatatablesAdvancedColumnRenderingAdminAffiliate = function() {
 			paging: true,
 			columnDefs: [
 				
-				{
-					targets: 1,
-					render: function(data, type, full, meta) {
-						return '<a class="text-dark-50 text-hover-primary" href="mailto:' + data + '">' + data + '</a>';
-					},
-				},
+				
 				{
 					targets: -1,
 					title: 'Actions',

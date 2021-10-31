@@ -4,8 +4,17 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'ambassador/index.html')
 
+def add_ambassador(request):
+    return render(request, 'ambassador/add_ambassador.html')
+
 def membership(request):
     return render(request, 'ambassador/membership.html')
+
+def invite_member(request):
+    return render(request, 'ambassador/invite_member.html')
+
+def invite_affiliate(request):
+    return render(request, 'ambassador/invite_affiliate.html')
 
 def notifications(request):
     return render(request, 'ambassador/notifications.html')

@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'administrator',
     'ambassador',
     'affiliate',
-    'member'
+    'member',
+    'accounts'
 ]
 
 MIDDLEWARE = [

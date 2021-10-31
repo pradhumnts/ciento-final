@@ -1,0 +1,541 @@
+{% extends "administrator/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-xl-8">
+          <div
+		  style="width:100%;"
+            class="
+              card card-custom card-stretch
+              gutter-b
+              bg-white
+              shadow
+              rounded-big
+            "
+          >
+            <!--begin::Header-->
+            <div class="card-header border-0 pt-5">
+              <h1 class="card-title align-items-start flex-column">
+                <span class="card-label font-weight-bolder text-dark"
+                  >Total Memberships</span
+                >
+                <span class="text-muted mt-3 font-weight-bold font-size-sm"
+                  >2021</span
+                >
+              </h1>
+            </div>
+			<hr>
+            <!--end::Header-->
+            <!--begin::Body-->
+            <div class="card-body pt-8">
+              <!--begin::Item-->
+              <div id="chart"></div>
+              <!--end::Item-->
+            </div>
+            <!--end::Body-->
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <!--begin::List Widget 1-->
+          <div
+            class="
+              card card-custom card-stretch
+              gutter-b
+              bg-white
+              shadow
+              rounded-big
+            "
+          >
+            <!--begin::Header-->
+            <div class="card-header border-0 pt-5">
+              <h3 class="card-title align-items-start flex-column">
+                <span class="card-label font-weight-bolder text-dark"
+                  >Recently Added Ambassadors</span
+                >
+                <span class="text-muted mt-3 font-weight-bold font-size-sm"
+                  >March 2021</span
+                >
+              </h3>
+            </div>
+            <!--end::Header-->
+            <!--begin::Body-->
+            <div class="card-body pt-8">
+           
+              <!--begin::Item-->
+              <div class="d-flex align-items-center mb-10">
+                <!--begin::Symbol-->
+                <div class="symbol symbol-light-primary mr-5">
+                  <span class="symbol-label">
+                    <img
+                      src="./assets/media/users/blank.png"
+                      alt=""
+                      class="img-fluid rounded"
+                    />
+                  </span>
+                </div>
+                <!--end::Symbol-->
+                <!--begin::Text-->
+                <div class="d-flex flex-column font-weight-bold">
+                  <a
+                    href="{% url 'administrator:admin_ambassador_profile' %}"
+                    class="mb-1 font-size-lg"
+                    >Anne Clark</a
+                  >
+                  <span class="text-muted">anneclarc@gmail.com</span>
+                </div>
+                <!--end::Text-->
+              </div>
+              <!--end::Item-->
+            </div>
+            <!--end::Body-->
+          </div>
+          <!--end::List Widget 1-->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card card-custom rounded-big">
+        <div class="card-header">
+          <div class="card-toolbar">
+            <ul class="nav nav-bold nav-pills">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  data-toggle="tab"
+                  href="#kt_tab_pane_7_1"
+                  >Memberships</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#kt_tab_pane_7_2"
+                  >Ambassadors</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#kt_tab_pane_7_3"
+                  >Affiliates</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#kt_tab_pane_7_4"
+                  >Members</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-body p-0">
+          <div class="tab-content">
+            <div
+              class="tab-pane fade show active"
+              id="kt_tab_pane_7_1"
+              role="tabpanel"
+              aria-labelledby="kt_tab_pane_7_1">
+              <div class="d-flex flex-column-fluid">
+                <!--begin::Container-->
+                <div class="container p-0">
+                
+                  <!--begin::Card-->
+                  <div class="card card-custom">
+                    <div class="card-header flex-wrap py-5">
+                      <div class="card-title">
+                        <h3 class="card-label">Memberships
+                        <div class="text-muted pt-2 font-size-sm">List of all the memberships</div></h3>
+                      </div>
+                      <div class="card-toolbar">
+                      
+                        <!--begin::Button-->
+                        <a href="#" class="btn btn-primary font-weight-bolder">
+                        <span class="svg-icon svg-icon-md">
+                          <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Flatten.svg-->
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <rect x="0" y="0" width="24" height="24" />
+                              <circle fill="#000000" cx="9" cy="15" r="6" />
+                              <path d="M8.8012943,7.00241953 C9.83837775,5.20768121 11.7781543,4 14,4 C17.3137085,4 20,6.6862915 20,10 C20,12.2218457 18.7923188,14.1616223 16.9975805,15.1987057 C16.9991904,15.1326658 17,15.0664274 17,15 C17,10.581722 13.418278,7 9,7 C8.93357256,7 8.86733422,7.00080962 8.8012943,7.00241953 Z" fill="#000000" opacity="0.3" />
+                            </g>
+                          </svg>
+                          <!--end::Svg Icon-->
+                        </span>New Record</a>
+                        <!--end::Button-->
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <!--begin: Datatable-->
+                      <table class="table table-separate table-head-custom table-checkable" id="kt_datatable">
+                        <thead>
+                          <tr>
+                            <th>Membership Name</th>
+                            <th>Ambassador</th>
+                            <th>Description</th>
+                            <th>Last Updated</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><div class="d-flex align-items-center">
+                              <div class="symbol symbol-50 flex-shrink-0">
+                                  <img src="./assets/media/ciento/membership/ismail-hadine-rsNbV-PiCHc-unsplash.jpg" alt="photo">
+                              </div>
+                              <div class="ml-3">
+                                <span class="text-dark-75 font-weight-bold line-height-sm d-block pb-2">Resident</span>
+                              </div>
+                            </div></td>
+                            <td><a href="{% url 'administrator:admin_ambassador_profile' %}" class="text-dark-50 text-hover-primary">Humbert Bresnen</a></td>
+                            <td>Surfers we welcome everyday. First beer for free
+                              every thursday!! (Offer valid until 5pm every Thursday)</td>
+                            <td>11/10/2021</td>
+                            <td>2</td>
+                          
+                            <td nowrap="nowrap"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <!--end: Datatable-->
+                    </div>
+                  </div>
+                  <!--end::Card-->
+                </div>
+                <!--end::Container-->
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="kt_tab_pane_7_2"
+              role="tabpanel"
+              aria-labelledby="kt_tab_pane_7_2"
+            >
+              <!--begin::Content-->
+					<div class="content d-flex flex-column flex-column-fluid" id="kt_content" style="padding:0">
+            <div class="card card-custom mb-5">
+              <div class="card-header flex-wrap py-5">
+                <div class="card-title">
+                  <h3 class="card-label">Ambassadors
+                  <div class="text-muted pt-2 font-size-sm">List of all the Ambassadors</div></h3>
+                </div>
+                <div class="card-toolbar">
+                
+                  <!--begin::Button-->
+                  <a href="#" class="btn btn-primary font-weight-bolder">
+                  <span class="svg-icon svg-icon-md">
+                    <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Flatten.svg-->
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <rect x="0" y="0" width="24" height="24" />
+                        <circle fill="#000000" cx="9" cy="15" r="6" />
+                        <path d="M8.8012943,7.00241953 C9.83837775,5.20768121 11.7781543,4 14,4 C17.3137085,4 20,6.6862915 20,10 C20,12.2218457 18.7923188,14.1616223 16.9975805,15.1987057 C16.9991904,15.1326658 17,15.0664274 17,15 C17,10.581722 13.418278,7 9,7 C8.93357256,7 8.86733422,7.00080962 8.8012943,7.00241953 Z" fill="#000000" opacity="0.3" />
+                      </g>
+                    </svg>
+                    <!--end::Svg Icon-->
+                  </span>New Record</a>
+                  <!--end::Button-->
+                </div>
+              </div>
+            </div>
+						<!--begin::Entry-->
+						<div class="d-flex flex-column-fluid">
+							<!--begin::Container-->
+							<div class="container">
+								<!--begin::Row-->
+								<div class="row">
+									<!--begin::Col-->
+									<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+										<!--begin::Card-->
+										<div class="card card-custom gutter-b card-stretch">
+                
+											<!--begin::Body-->
+											<div class="card-body pt-4 border rounded">
+												
+												<!--begin::User-->
+												<div class="d-flex align-items-end mb-7">
+													<!--begin::Pic-->
+													<div class="d-flex align-items-center">
+														<!--begin::Pic-->
+														<div class="flex-shrink-0 mr-4 mt-lg-0 mt-3">
+															<div class="symbol symbol-circle symbol-lg-75">
+																<img src="./assets/media/ciento/membership/walter-lee-olivares-de-la-cruz-aGlvfwYXzdg-unsplash.jpg" alt="image" />
+															</div>
+															<div class="symbol symbol-lg-75 symbol-circle symbol-primary d-none">
+																<span class="font-size-h3 font-weight-boldest">JM</span>
+															</div>
+														</div>
+														<!--end::Pic-->
+														<!--begin::Title-->
+														<div class="d-flex flex-column">
+															<a href="#" class="text-dark font-weight-bold text-hover-primary font-size-h4 mb-0">Luca Doncic</a>
+															<span class="text-muted font-weight-bold">Head of Development</span>
+														</div>
+														<!--end::Title-->
+													</div>
+													<!--end::Title-->
+												</div>
+												<!--end::User-->
+												<!--begin::Desc-->
+												<p class="mb-7">I distinguish three
+												<a href="#" class="text-primary pr-1">#XRS-54PQ</a>objectives First objectives and nice cooked rice</p>
+												<!--end::Desc-->
+												<!--begin::Info-->
+												<div class="mb-7">
+													<div class="d-flex justify-content-between align-items-center">
+														<span class="text-dark-75 font-weight-bolder mr-2">Email:</span>
+														<a href="#" class="text-muted text-hover-primary">luca@festudios.com</a>
+													</div>
+													<div class="d-flex justify-content-between align-items-cente my-1">
+														<span class="text-dark-75 font-weight-bolder mr-2">Phone:</span>
+														<a href="#" class="text-muted text-hover-primary">44(76)34254578</a>
+													</div>
+													<div class="d-flex justify-content-between align-items-center">
+														<span class="text-dark-75 font-weight-bolder mr-2">Location:</span>
+														<span class="text-muted font-weight-bold">Barcelona</span>
+													</div>
+												</div>
+												<!--end::Info-->
+												<a href="{% url 'administrator:admin_ambassador_profile' %}" class="btn btn-block btn-sm btn-outline-primary font-weight-bolder text-uppercase py-4">view</a>
+											</div>
+											<!--end::Body-->
+										</div>
+										<!--end::Card-->
+									</div>
+									<!--end::Col-->
+								</div>
+								<!--end::Row-->
+							</div>
+							<!--end::Container-->
+						</div>
+						<!--end::Entry-->
+					</div>
+					<!--end::Content-->
+			
+            </div>
+            <div
+              class="tab-pane fade"
+              id="kt_tab_pane_7_3"
+              role="tabpanel"
+              aria-labelledby="kt_tab_pane_7_3"
+            >
+            <div class="d-flex flex-column-fluid">
+              <!--begin::Container-->
+              <div class="container p-0">
+              
+                <!--begin::Card-->
+                <div class="card card-custom">
+                  <div class="card-header flex-wrap py-5">
+                    <div class="card-title">
+                      <h3 class="card-label">
+                        Affiliates
+                      <div class="text-muted pt-2 font-size-sm">List of all the affiliates</div>
+                    </h3>
+                    </div>
+                    
+                  </div>
+                  <div class="card-body">
+                    <!--begin: Datatable-->
+                    <table class="table table-separate table-head-custom table-checkable" id="admin-affiliate">
+                      <thead>
+                        <tr>
+                          <th>Affiliate</th>
+                          <th>Memberships</th>
+                          <th>Created On</th>
+                          <th>Updated On</th>
+                          <th>Status</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><div class="d-flex align-items-center">
+                            <div class="symbol symbol-50 flex-shrink-0">
+                                <img src="./assets/media/ciento/albert-YYZU0Lo1uXE-unsplash.jpg" alt="photo">
+                            </div>
+                            <div class="ml-3">
+                              <span class="text-dark-75 font-weight-bold line-height-sm d-block pb-2">Humbert Bresnen</span>
+                            </div>
+                          </div></td>
+                          <td>Residents Cabarete</td>
+                          <td>30/08/2021</td>
+                          <td>13/10/2021</td>
+                          <td>2</td>
+                        
+                          <td nowrap="nowrap"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!--end: Datatable-->
+                  </div>
+                </div>
+                <!--end::Card-->
+              </div>
+              <!--end::Container-->
+            </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="kt_tab_pane_7_4"
+              role="tabpanel"
+              aria-labelledby="kt_tab_pane_7_3"
+            >
+            <div class="d-flex flex-column-fluid">
+              <!--begin::Container-->
+              <div class="container p-0">
+              
+                <!--begin::Card-->
+                <div class="card card-custom">
+                  <div class="card-header flex-wrap py-5">
+                    <div class="card-title">
+                      <h3 class="card-label">
+                        Members
+                      <div class="text-muted pt-2 font-size-sm">List of all the members</div>
+                    </h3>
+                    </div>
+                    
+                  </div>
+                  <div class="card-body">
+                    <!--begin: Datatable-->
+                    <table class="table table-separate table-head-custom table-checkable" id="admin-member">
+                      <thead>
+                        <tr>
+                          <th>Member</th>
+                          <th>Memberships</th>
+                          <th>Created On</th>
+                          <th>Updated On</th>
+                          <th>Status</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><div class="d-flex align-items-center">
+                            <div class="symbol symbol-50 flex-shrink-0">
+                                <img src="./assets/media/users/100_1.jpg" alt="photo">
+                            </div>
+                            <div class="ml-3">
+                              <a href="{% url 'administrator:admin_member_profile' %}" class="text-dark-50 text-hover-primary"><span>Humbert Bresnen</span></a>
+                            </div>
+                          </div></td>
+                          <td>Residents Cabarete</td>
+                          <td>30/08/2021</td>
+                          <td>9/10/2021</td>
+                          <td>2</td>
+                        
+                          <td nowrap="nowrap"></td>
+                        </tr>
+                       
+                      </tbody>
+                    </table>
+                    <!--end: Datatable-->
+                  </div>
+                </div>
+                <!--end::Card-->
+              </div>
+              <!--end::Container-->
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      // chart js
+      var options = {
+        chart: {
+          type: "area",
+        },
+        series: [
+          {
+            name: "Memberships",
+            data: [5, 10, 15, 20, 25, 30, 35, 40, 45],
+          },
+        ],
+
+        xaxis: {
+          categories: ["MS1", "MS2", "MS3", "MS4", "MS5", "MS6", "MS7", "MS8", "MS9"],
+        },
+        colors: ["#1EC5BD"],
+      };
+
+      var chart = new ApexCharts(document.querySelector("#chart"), options);
+
+      chart.render();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!--begin::Page Scripts(used by this page)-->
+  
+    <script>
+      var KTAppSettings = {
+        breakpoints: {
+          sm: 576,
+          md: 768,
+          lg: 992,
+          xl: 1200,
+          xxl: 1200,
+        },
+        colors: {
+          theme: {
+            base: {
+              white: "#ffffff",
+              primary: "#8950FC",
+              secondary: "#E5EAEE",
+              success: "#1BC5BD",
+              info: "#8950FC",
+              warning: "#FFA800",
+              danger: "#F64E60",
+              light: "#F3F6F9",
+              dark: "#212121",
+            },
+            light: {
+              white: "#ffffff",
+              primary: "#E1E9FF",
+              secondary: "#ECF0F3",
+              success: "#C9F7F5",
+              info: "#EEE5FF",
+              warning: "#FFF4DE",
+              danger: "#FFE2E5",
+              light: "#F3F6F9",
+              dark: "#D6D6E0",
+            },
+            inverse: {
+              white: "#ffffff",
+              primary: "#ffffff",
+              secondary: "#212121",
+              success: "#ffffff",
+              info: "#ffffff",
+              warning: "#ffffff",
+              danger: "#ffffff",
+              light: "#464E5F",
+              dark: "#ffffff",
+            },
+          },
+          gray: {
+            "gray-100": "#F3F6F9",
+            "gray-200": "#ECF0F3",
+            "gray-300": "#E5EAEE",
+            "gray-400": "#D6D6E0",
+            "gray-500": "#B5B5C3",
+            "gray-600": "#80808F",
+            "gray-700": "#464E5F",
+            "gray-800": "#1B283F",
+            "gray-900": "#212121",
+          },
+        },
+        "font-family": "Poppins",
+      };
+    </script>
+    {% endblock %}
+    
+    {% block scripts %}
+     <!--begin::Page Vendors(used by this page)-->
+     <script src="{% static 'assets/plugins/custom/datatables/datatables.bundle.js' %}"></script>
+     <!--end::Page Vendors-->
+     <!--begin::Page Scripts(used by this page)-->
+     <script src="{% static 'assets/js/pages/crud/datatables/advanced/column-rendering.js' %}"></script>
+     <script src="{% static 'assets/js/pages/crud/datatables/advanced/admin-affiliate.js' %}"></script>
+     <script src="{% static 'assets/js/pages/crud/datatables/advanced/admin-member.js' %}"></script>
+     <!--end::Page Scripts-->
+     {% endblock %}

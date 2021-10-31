@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cineto: Ambassador Login</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="{% static 'assets/media/Ciento_R3 yellow.png' %}"
+      sizes="32x32"
+    />
+
+    <link rel="stylesheet" href="{% static 'assets/css/quick-website.css' %}" />
+
+</head>
+<body>
+ 
+    <div class="container-fluid">
+        <div class="row vh-100">
+            <div class="col-lg-6 bg-primary d-flex align-items-center justify-content-center flex-column">
+                
+                    <img src="{% static 'assets/media/Ciento_R3 yellow.png' %}" alt="" class="img-fluid" style="width:8rem">
+                    <h2 class="text-white mt-3 text-center">Manage your membership and invite affiliates & members.</h2>
+            </div>
+            <div class="col-lg-6 login-form d-flex justify-content-center flex-column">
+                <h1 class="mb-5">Ciento Ambassador Login.</h1>
+                <form>
+                    <div class="form-group">
+                        <label class="form-control-label">Email address</label>
+                        <div class="input-group input-group-merge">
+                            <input type="email" class="form-control form-control-prepend" id="input-email" placeholder="name@example.com">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-4">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div>
+                                <label class="form-control-label">Password</label>
+                            </div>
+                            
+                        </div>
+                        <div class="input-group input-group-merge">
+                            <input type="password" class="form-control form-control-prepend" id="input-password" placeholder="********">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-key"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <button
+                        type="button"
+                        class="btn btn-primary border btn-icon"
+                      >
+                        <span class="btn-inner--icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="1em"
+                            height="1em"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="feather feather-user"
+                          >
+                            <path
+                              d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+                            ></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                          </svg>
+                        </span>
+                        <span class="btn-inner--text">Log in</span>
+                      </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="back" onclick="window.history.go(-1); return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="31.113" height="23.082" viewBox="0 0 31.113 23.082">
+                <path id="Icon_ionic-md-arrow-round-back" data-name="Icon ionic-md-arrow-round-back" d="M34.617,15.66l-21.524-.014,5.771-5.521a2.3,2.3,0,0,0,0-3.143,2.056,2.056,0,0,0-3,0L6.251,16.3a2.118,2.118,0,0,0-.626,1.558v.028a2.118,2.118,0,0,0,.626,1.558l9.6,9.318a2.056,2.056,0,0,0,3,0,2.3,2.3,0,0,0,0-3.143L13.086,20.1H34.617a2.22,2.22,0,0,0,0-4.436Z" transform="translate(-5.625 -6.33)" fill="#fff"/>
+              </svg>                 
+        </div>
+    
+    </div>
+    <style>
+        
+       
+        .login-form{
+            padding:2rem;
+        }
+        @media only screen and (min-width: 768px) {
+        /* For mobile phones: */
+        .login-form{
+            padding:3rem 5rem;
+        }
+      }
+    </style>
+
+
+</body>
+</html>

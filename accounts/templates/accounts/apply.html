@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cineto: Apply For Membership</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="{% static 'assets/media/Ciento_R3 yellow.png' %}"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" href="{% static 'assets/css/quick-website.css' %}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <!-- <div class="loading-wrapper">
+        <div id="loading"></div>
+    </div> -->
+    <div class="container-fluid p-5 bg-primary vh-100 ">
+        <div class="login-form d-flex justify-content-center align-items-center h-100 flex-column">
+            <img src="./Ciento_R3 yellow.png" alt="" class="img-fluid" style="width:8rem">
+            <h2 class="my-5 text-white text-center">Apply for Membership.</h2>
+            <form class="w-50 px-5">
+                <div class="form-group">
+                    <label class="form-control-label text-white">Email address</label>
+                    <div class="input-group input-group-merge">
+                        <input type="email" class="form-control form-control-prepend" id="input-email" placeholder="name@example.com">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 d-flex justify-content-end">
+                    <button
+                    type="button"
+                    class="btn btn-sm btn-white border btn-icon"
+                  >
+                    <span class="btn-inner--icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="1em"
+                        height="1em"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-user"
+                      >
+                        <path
+                          d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+                        ></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                      </svg>
+                    </span>
+                    <span class="btn-inner--text">Apply</span>
+                  </button>
+                </div>
+            </form>
+        </div>
+        <div class="back" onclick="window.history.go(-1); return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="31.113" height="23.082" viewBox="0 0 31.113 23.082">
+                <path id="Icon_ionic-md-arrow-round-back" data-name="Icon ionic-md-arrow-round-back" d="M34.617,15.66l-21.524-.014,5.771-5.521a2.3,2.3,0,0,0,0-3.143,2.056,2.056,0,0,0-3,0L6.251,16.3a2.118,2.118,0,0,0-.626,1.558v.028a2.118,2.118,0,0,0,.626,1.558l9.6,9.318a2.056,2.056,0,0,0,3,0,2.3,2.3,0,0,0,0-3.143L13.086,20.1H34.617a2.22,2.22,0,0,0,0-4.436Z" transform="translate(-5.625 -6.33)" fill="#fff"/>
+              </svg>                 
+        </div>
+    </div>
+    <script>
+             $(document).ready(function(){
+              $(window).on('load', function() {
+                  $('.loading-wrapper').fadeOut('slow');
+              })
+});
+    </script>
+
+    
+</body>
+</html>

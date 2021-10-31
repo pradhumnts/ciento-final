@@ -4,6 +4,9 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'affiliate/index.html')
 
+def add_affiliate(request):
+    return render(request, 'affiliate/add_affiliate.html')
+
 def notifications(request):
     return render(request, 'affiliate/notifications.html')
 
